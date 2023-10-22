@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mycalendar_flutter/pages/bottom_tab_page.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:mycalendar_flutter/l10n/l10n.dart';
 import 'package:mycalendar_flutter/pages/detail/setting_page.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,8 +19,19 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const BottomTabPage(),
-      //home: const SettingPage(),
+      supportedLocales: L10n.all,
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      // supportedLocales: const [
+      //   Locale('en'), // English
+      //   Locale('vi'), // VietNam
+      // ],
+      //home: const BottomTabPage(),
+      home: const SettingPage(),
     );
   }
 }

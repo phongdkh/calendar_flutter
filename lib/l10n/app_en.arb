@@ -1,0 +1,10 @@
+{
+  "youtubeTitle": "Youtube",
+  "@youtubeTitle": {
+    "description": "The current Language"
+  },
+  "facebookTitle": "Facebook",
+  "@facebookTitle": {
+    "description": "A programmer greeting"
+  }
+}

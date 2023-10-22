@@ -31,93 +31,87 @@ class _BottomTabPageState extends State<BottomTabPage> {
         child: currentScreen,
       ),
       floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
-        backgroundColor: Color(0x66f32525),
+        backgroundColor: const Color(0x66f32525),
         onPressed: () {},
+        child: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
-        color: Color(0x66f32525),
+        color: const Color(0x66f32525),
         shape: const CircularNotchedRectangle(),
         notchMargin: 10,
-        child: Container(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              InkWell(
-                onTap: () {
-                  setState(() {
-                    currentScreen = const HomePage();
-                    currentTab = 1;
-                  });
-                }, // button pressed
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(Icons.calendar_today,
-                        color: currentTab == 0
-                            ? Colors.grey
-                            : Colors.green), // icon
-                    const Text("Lịch"), // text
-                  ],
-                ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            InkWell(
+              onTap: () {
+                setState(() {
+                  currentScreen = const HomePage();
+                  currentTab = 1;
+                });
+              }, // button pressed
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.calendar_today,
+                      color:
+                          currentTab == 0 ? Colors.grey : Colors.green), // icon
+                  const Text("Lịch"), // text
+                ],
               ),
-              InkWell(
-                onTap: () {
-                  setState(() {
-                    currentScreen = const ManagerPage();
-                    currentTab = 1;
-                  });
-                }, // button pressed
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(Icons.account_balance_wallet_rounded,
-                        color: currentTab == 0
-                            ? Colors.grey
-                            : Colors.green), // icon
-                    const Text("Quản lý"), // text
-                  ],
-                ),
+            ),
+            InkWell(
+              onTap: () {
+                setState(() {
+                  currentScreen = const ManagerPage();
+                  currentTab = 1;
+                });
+              }, // button pressed
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.account_balance_wallet_rounded,
+                      color:
+                          currentTab == 0 ? Colors.grey : Colors.green), // icon
+                  const Text("Quản lý"), // text
+                ],
               ),
-              InkWell(
-                onTap: () {
-                  setState(() {
-                    currentScreen = const ChallengePage();
-                    currentTab = 1;
-                  });
-                }, // button pressed
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(Icons.camera,
-                        color: currentTab == 0
-                            ? Colors.grey
-                            : Colors.green), // icon
-                    const Text("Thử thách"), // text
-                  ],
-                ),
+            ),
+            InkWell(
+              onTap: () {
+                setState(() {
+                  currentScreen = const ChallengePage();
+                  currentTab = 1;
+                });
+              }, // button pressed
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.camera,
+                      color:
+                          currentTab == 0 ? Colors.grey : Colors.green), // icon
+                  const Text("Thử thách"), // text
+                ],
               ),
-              InkWell(
-                onTap: () {
-                  setState(() {
-                    currentScreen = const SettingPage();
-                    currentTab = 1;
-                  });
-                }, // button pressed
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(Icons.settings,
-                        color: currentTab == 0
-                            ? Colors.grey
-                            : Colors.green), // icon
-                    const Text("Cài đặt"), // text
-                  ],
-                ),
+            ),
+            InkWell(
+              onTap: () {
+                setState(() {
+                  currentScreen = const SettingPage();
+                  currentTab = 1;
+                });
+              }, // button pressed
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.settings,
+                      color:
+                          currentTab == 0 ? Colors.grey : Colors.green), // icon
+                  const Text("Cài đặt"), // text
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
