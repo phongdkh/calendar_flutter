@@ -3,6 +3,8 @@ import 'package:mycalendar_flutter/gen/assets.gen.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../generated/l10n.dart';
+
 class SettingTopWidget extends StatelessWidget {
   const SettingTopWidget({Key? key}) : super(key: key);
 
@@ -20,12 +22,10 @@ class SettingTopWidget extends StatelessWidget {
         children: [
           const SizedBox(height: 5),
           ListTile(
-            leading: SizedBox(
-              width: 50,
-              height: 50,
-              child: Assets.icons.messenger.svg(),
+            leading: Assets.icons.messenger.svg(width: 40, height: 40),
+            title: Text(
+              S.of(context).messenger,
             ),
-            title: const Text("Phản hồi"),
             trailing: const Icon(
               Icons.arrow_forward_ios,
               size: 15,
@@ -36,12 +36,10 @@ class SettingTopWidget extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: SizedBox(
-              width: 50,
-              height: 50,
-              child: Assets.icons.star.svg(),
+            leading: Assets.icons.star.svg(width: 40, height: 40),
+            title: Text(
+              S.of(context).evaluate,
             ),
-            title: const Text("Đánh giá"),
             trailing: const Icon(
               Icons.arrow_forward_ios,
               size: 15,
@@ -49,27 +47,26 @@ class SettingTopWidget extends StatelessWidget {
             onTap: () {},
           ),
           ListTile(
-            leading: SizedBox(
-              width: 50,
-              height: 50,
-              child: Assets.icons.share.svg(),
+            leading: Assets.icons.share.svg(width: 40, height: 40),
+            title: Text(
+              S.of(context).share,
             ),
-            title: const Text("Chia sẻ với bạn bè"),
             trailing: const Icon(
               Icons.arrow_forward_ios,
               size: 15,
             ),
             onTap: () {
-              Share.share('My Calendar');
+              Share.share(
+                "text",
+                subject: "subject",
+              );
             },
           ),
           ListTile(
-            leading: SizedBox(
-              width: 50,
-              height: 50,
-              child: Assets.icons.agreement.svg(),
+            leading: Assets.icons.condion.svg(width: 40, height: 40),
+            title: Text(
+              S.of(context).condition,
             ),
-            title: const Text("Điều kiện"),
             trailing: const Icon(
               Icons.arrow_forward_ios,
               size: 15,
@@ -78,12 +75,10 @@ class SettingTopWidget extends StatelessWidget {
           ),
           const SizedBox(height: 5),
           ListTile(
-            leading: SizedBox(
-              width: 50,
-              height: 50,
-              child: Assets.icons.shield.svg(),
+            leading: Assets.icons.shield.svg(width: 40, height: 40),
+            title: Text(
+              S.of(context).security,
             ),
-            title: const Text("Chính sách bảo mật"),
             trailing: const Icon(
               Icons.arrow_forward_ios,
               size: 15,

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mycalendar_flutter/pages/detail/setting_page.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
+import '../generated/l10n.dart';
+
 class ItemFacebookWidget extends StatefulWidget {
   const ItemFacebookWidget({Key? key}) : super(key: key);
 
@@ -26,7 +28,13 @@ class _WebViewContainerState extends State<ItemFacebookWidget> {
           },
           icon: const Icon(Icons.arrow_back),
         ),
-        title: const Text('Facebook'),
+        title: Text(
+          S.of(context).facebook,
+          style: const TextStyle(
+            fontSize: 23.0,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       body: WebViewWidget(controller: controller),
     );

@@ -5,6 +5,8 @@ import 'package:mycalendar_flutter/components/item_tiktok_widget.dart';
 import 'package:mycalendar_flutter/components/item_youtube_widget.dart';
 import 'package:mycalendar_flutter/gen/assets.gen.dart';
 
+import '../../../generated/l10n.dart';
+
 class SettingBottomWidget extends StatelessWidget {
   const SettingBottomWidget({Key? key}) : super(key: key);
 
@@ -20,22 +22,19 @@ class SettingBottomWidget extends StatelessWidget {
           ]),
       child: Column(
         children: [
-          const Column(
-            children: [
-              ListTile(
-                title: Text("Theo dõi tôi"),
-              ),
-            ],
-          ),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const SizedBox(height: 5),
+              Text(
+                S.of(context).follow,
+                style: const TextStyle(fontSize: 18),
+              ),
               ListTile(
-                leading: SizedBox(
-                  width: 50,
-                  height: 50,
-                  child: Assets.icons.tiktok.svg(),
+                leading: Assets.icons.tiktok.svg(width: 40, height: 40),
+                title: Text(
+                  S.of(context).tiktok,
                 ),
-                title: const Text("Tiktok"),
                 trailing: const Icon(
                   Icons.arrow_forward_ios,
                   size: 15,
@@ -51,12 +50,10 @@ class SettingBottomWidget extends StatelessWidget {
           ),
           const SizedBox(height: 5),
           ListTile(
-            leading: SizedBox(
-              width: 50,
-              height: 50,
-              child: Assets.icons.youtube.svg(),
+            leading: Assets.icons.youtube.svg(width: 40, height: 40),
+            title: Text(
+              S.of(context).youtube,
             ),
-            title: const Text("Youtube"),
             trailing: const Icon(
               Icons.arrow_forward_ios,
               size: 15,
@@ -70,12 +67,10 @@ class SettingBottomWidget extends StatelessWidget {
           ),
           const SizedBox(height: 5),
           ListTile(
-            leading: SizedBox(
-              width: 50,
-              height: 50,
-              child: Assets.icons.facebook.svg(),
+            leading: Assets.icons.facebook.svg(width: 40, height: 40),
+            title: Text(
+              S.of(context).facebook,
             ),
-            title: const Text("Facebook"),
             trailing: const Icon(
               Icons.arrow_forward_ios,
               size: 15,
@@ -89,12 +84,10 @@ class SettingBottomWidget extends StatelessWidget {
           ),
           const SizedBox(height: 5),
           ListTile(
-            leading: SizedBox(
-              width: 50,
-              height: 50,
-              child: Assets.icons.pinterest.svg(),
+            leading: Assets.icons.pinterest.svg(width: 40, height: 40),
+            title: Text(
+              S.of(context).pinterest,
             ),
-            title: const Text("Pinterest"),
             trailing: const Icon(
               Icons.arrow_forward_ios,
               size: 15,

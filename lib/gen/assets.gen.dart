@@ -14,8 +14,11 @@ import 'package:flutter/services.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
-  /// File path: assets/icons/agreement.svg
-  SvgGenImage get agreement => const SvgGenImage('assets/icons/agreement.svg');
+  /// File path: assets/icons/condion.svg
+  SvgGenImage get condion => const SvgGenImage('assets/icons/condion.svg');
+
+  /// File path: assets/icons/condition.svg
+  SvgGenImage get condition => const SvgGenImage('assets/icons/condition.svg');
 
   /// File path: assets/icons/crown.svg
   SvgGenImage get crown => const SvgGenImage('assets/icons/crown.svg');
@@ -46,7 +49,8 @@ class $AssetsIconsGen {
 
   /// List of all assets
   List<SvgGenImage> get values => [
-        agreement,
+        condion,
+        condition,
         crown,
         facebook,
         messenger,
